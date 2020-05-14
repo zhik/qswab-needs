@@ -123,6 +123,7 @@
             <div class="marker marker-location">1</div>
             <div class="label">Location-specific need</div>
         </div>
+        <span class="subtitle">Lower numbers are higher priority</span>
         <hr/>
         <h5>Categories</h5>
         {#each categories as cat}
@@ -131,6 +132,7 @@
                 <div class="label">{cat.name}</div>
             </div>
         {/each}
+        <span class="subtitle">Click on points or lines for more details</span>
     </div>
 </div>
 
@@ -159,9 +161,15 @@
         margin: 5px 0px;
     }
 
+    .legend .subtitle{
+        font-style: italic;
+        font-size: 0.9rem;
+    }
+
     .legend hr {
-        background-color: #8b8b8b;
-        margin: 4px 0px;
+        background-color: #c1c1c1;
+        color: #c1c1c1;
+        margin: 6px 2px;
     }
 
     .legend-item {
