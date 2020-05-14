@@ -7,10 +7,10 @@
 
     const categories = [
         {name: 'Litter Basket Collection & Cleaning Service', color: '#aa5e58', letter: 'L'},
-        {name: 'Infrastructure & Equipment', color: '#617fa1', letter: 'I'},
+        {name: 'Infrastructure & Equipment', color: '#4060a3', letter: 'I'},
         {name: 'Residential Organics, Recycle, or Refuse', color: '#719a63', letter: 'R', includes: 'Residential'},
         {name: 'Illegal Posting', color: '#846397', letter: 'P'},
-        {name: 'Other', color: '#6a6a6a', letter: 'O'}
+        {name: 'Other', color: '#959595', letter: 'O'}
     ]
 
     onMount(() => {
@@ -99,8 +99,8 @@
                                     .setPopup(new mapboxgl.Popup({offset: 5})
                                             .setHTML(`
                                                     <h3>${request}</h3>
-                                                    <p>${category}</p>
-                                                    <p>Community District: ${district}</p>
+                                                    <p><strong>${category}</strong></p>
+                                                    <p><strong>Community District:</strong> ${district}</p>
                                                     <p>${explanation}</p>
                                             `))
                                     .addTo(map);
@@ -165,7 +165,7 @@
     }
 
     .legend-item {
-        letter-spacing: -1px;
+        letter-spacing: -0.2px;
         margin-right: 1rem;
         display: flex;
         flex-direction: row;
@@ -186,10 +186,10 @@
         background-color: #363636;
         color: white;
         font-weight: 600;
-        line-height: 14.5px;
-        height: 14px;
-        width: 14px;
-        font-size: 10px;
+        line-height: 15.5px;
+        height: 15px;
+        width: 15px;
+        font-size: 11px;
         border: 1px solid rgba(255, 255, 255, 0.6);
         cursor: pointer;
     }
@@ -218,8 +218,8 @@
         padding: 5px 10px !important;
     }
 
-    :global(.mapboxgl-popup-content *) {
-        margin: 4px;
+    :global(.mapboxgl-popup-content p) {
+        margin: 4px 0px;
     }
 
 </style>
